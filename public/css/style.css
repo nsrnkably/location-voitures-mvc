@@ -1,0 +1,215 @@
+/* ==========================================
+   TP2 - Location de voitures (MVC)
+   Feuille de style
+   ========================================== */
+
+/* ---------- Variables ---------- */
+:root {
+    --couleur-principale: #1e3a5f;
+    --couleur-accent: #f59e0b;
+    --couleur-danger: #c0392b;
+    --couleur-succes: #1e7e34;
+    --couleur-fond: #f4f6f9;
+}
+
+/* ---------- Structure de la page ---------- */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: var(--couleur-fond);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    box-sizing: border-box;
+}
+
+h1, h2 {
+    color: var(--couleur-principale);
+}
+
+/* ---------- Navigation ---------- */
+nav {
+    background-color: var(--couleur-principale);
+    padding: 15px 20px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1000px;
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding-bottom: 4px;
+}
+
+nav a:hover {
+    border-bottom: 2px solid var(--couleur-accent);
+}
+
+/* ---------- Accueil ---------- */
+.accueil {
+    max-width: 700px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    border-top: 5px solid var(--couleur-accent);
+}
+
+/* ---------- Tableau ---------- */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #fff;
+}
+
+th {
+    background-color: var(--couleur-principale);
+    color: #fff;
+    text-align: left;
+    padding: 10px;
+}
+
+td {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* ---------- Formulaires et détails ---------- */
+.container {
+    width: 380px;
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 30px;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 6px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Le bouton Enregistrer garde sa taille normale (comme Annuler) */
+input[type="submit"] {
+    width: auto;
+}
+
+/* ---------- Boutons ---------- */
+.btn {
+    margin-top: 10px;
+    display: inline-block;
+    padding: 6px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid var(--couleur-principale);
+    color: var(--couleur-principale);
+    border-radius: 5px;
+    background-color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--couleur-principale);
+    color: #fff;
+}
+
+.btn.red {
+    border-color: var(--couleur-danger);
+    color: var(--couleur-danger);
+}
+
+.btn.red:hover {
+    background-color: var(--couleur-danger);
+    color: #fff;
+}
+
+/* Boutons côte à côte dans un tableau */
+.actions {
+    white-space: nowrap;
+}
+
+.actions form {
+    display: inline;
+}
+
+.actions .btn {
+    margin-top: 0;
+    font-size: 14px;
+    padding: 4px 12px;
+}
+
+/* ---------- Messages ---------- */
+/* Erreur de validation sous un champ */
+.error {
+    display: block;
+    padding: 5px;
+    margin: -5px 0 10px 0;
+    background-color: #fdecea;
+    border: 1px solid var(--couleur-danger);
+    border-radius: 5px;
+    font-size: 0.9em;
+    color: var(--couleur-danger);
+}
+
+/* Message d'erreur général (ex. : suppression refusée) */
+.message-erreur {
+    background-color: #fdecea;
+    color: var(--couleur-danger);
+    border-left: 4px solid var(--couleur-danger);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Message de confirmation (ex. : voiture ajoutée) */
+.message-succes {
+    background-color: #e6f4ea;
+    color: var(--couleur-succes);
+    border-left: 4px solid var(--couleur-succes);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* ---------- Pied de page ---------- */
+footer {
+    background-color: var(--couleur-principale);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+}
